@@ -25,32 +25,29 @@ db.once('open',function(){
 //Segunda Fase ----- usando o Banco
 
 //Criando Sistema
-const alunoSchema = new mongoose.Schema({
-    matricula: String,
+const contatoSchema = new mongoose.Schema({
     nome: String,
     idade: Number,
-    turma: String
+    email: String
 })
 
 
 //Criando Model
-const Aluno = mongoose.model("Aluno", alunoSchema);
+const Contato = mongoose.model("Contatos", contatoSchema);
 
-const maria= new Aluno({
-    matricula: "rm501" ,
-    nome:"Maria Silva" ,
+const epaminondas= new Contato({
+    nome:"epaminondas" ,
     idade:16,
-    turma:"1Mib"
+    email:"epaminondas@gmail.com"
 });
 
-maria.save();
+epaminondas.save();
 
-const carlos= new Aluno({
-    matricula: "rm564" ,
-    nome:"Carlos Silva" ,
+const carla= new Contato({
+    nome:"Carla" ,
     idade:18,
-    turma:"3Mib"
+    email:"carla@gmail.com"
 });
 
-carlos.save()
+carla.save()
 
